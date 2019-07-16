@@ -1,0 +1,9 @@
+<form action="/posts/update/<%=@post.id%>" method="post">
+	<label>Title</label><br>
+	<input type="text" name="title" placeholder="Title" value="<%=@post.title%>"><br>
+	<label>Content</label><br>
+	<textarea name="content" rows="5" placeholder="Content"><%=@post.content%></textarea><br>
+	<button type="submit">
+		수정
+	</button>
+</form>
