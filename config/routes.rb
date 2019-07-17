@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 	root 'posts#index'
-	get 'posts/index'
-	get 'posts/new'
-	post 'posts/create'
-	get 'posts/delete/:id'
-	get 'posts/edit/:id'
-	post 'posts/update/:id'
+	get 'posts/index' => 'posts#index'
+	get 'posts/new' => 'posts#new'
+	post 'posts/create' => 'posts#create'
+	get 'posts/delete/:id' => 'posts#delete'
+	get 'posts/edit/:id' => 'posts#edit'
+	post 'posts/update/:id' => 'posts#update'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
