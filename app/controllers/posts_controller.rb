@@ -34,4 +34,13 @@ class PostsController < ApplicationController
 		
 		redirect_to "/"
 	end
+	
+	def comment_create
+		comment = Comment.new
+		comment.content = params[:content]
+		comment.post_id = params[:post_id]
+		comment.save
+		
+		redirect_to "/"
+	end
 end
